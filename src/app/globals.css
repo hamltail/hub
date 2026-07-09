@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-noto-sans-jp);
+  --font-heading: var(--font-barlow-condensed);
+}
