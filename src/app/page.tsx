@@ -1,4 +1,8 @@
 import Image from "next/image";
+import animalCorporationImage from "../../public/images/works/animal-corporation.webp";
+import interactionLabImage from "../../public/images/works/interaction-lab.webp";
+import portfolioSiteImage from "../../public/images/works/portfolio-site.webp";
+import pawthImage from "../../public/images/works/pawth.webp";
 
 const externalLinks = [
   {
@@ -19,7 +23,7 @@ const works = [
   {
     title: "Animal Corporation",
     description: "架空企業のコーポレートサイト",
-    image: "/images/works/animal-corporation.webp",
+    image: animalCorporationImage,
     links: [
       {
         label: "Webサイト",
@@ -38,7 +42,7 @@ const works = [
   {
     title: "Interaction Lab",
     description: "Web制作・UI実験のアトリエ",
-    image: "/images/works/interaction-lab.webp",
+    image: interactionLabImage,
     links: [
       {
         label: "Webサイト",
@@ -57,7 +61,7 @@ const works = [
   {
     title: "Portfolio Site",
     description: "制作物を掲載したポートフォリオサイト",
-    image: "/images/works/portfolio-site.webp",
+    image: portfolioSiteImage,
     links: [
       {
         label: "Figma",
@@ -72,7 +76,7 @@ const works = [
   {
     title: "Pawth",
     description: "小さなWeb日記アプリ",
-    image: "/images/works/pawth.webp",
+    image: pawthImage,
     links: [
       {
         label: "Webサイト",
@@ -132,6 +136,8 @@ export default function Home() {
                     src={work.image}
                     alt={work.title}
                     fill
+                    placeholder="blur"
+                    sizes="(min-width: 1200px) 352px, (min-width: 768px) 328px, calc(100vw - 56px)"
                     className="object-cover"
                   />
                 </div>
