@@ -14,8 +14,27 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Hub",
-  description: "The hub of hamltail.",
+  metadataBase: new URL("https://hub.hamltail.dev"),
+  title: "Portfolio | h-waji / hamltail",
+  description: "Web制作・UI設計・個人開発の制作物を掲載したポートフォリオサイト。",
+  openGraph: {
+    title: "Portfolio | h-waji / hamltail",
+    description: "Web制作・UI設計・個人開発の制作物を掲載したポートフォリオサイト。",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Portfolio | h-waji / hamltail",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Portfolio | h-waji / hamltail",
+    description: "Web制作・UI設計・個人開発の制作物を掲載したポートフォリオサイト。",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
