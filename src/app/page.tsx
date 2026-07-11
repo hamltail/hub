@@ -113,7 +113,7 @@ export default function Home() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="nav-link font-heading transition hover:opacity-60"
+                  className="nav-link font-heading transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 >
                   {link.label}
                 </a>
@@ -129,7 +129,7 @@ export default function Home() {
             {works.map((work) => (
               <article
                 key={work.title}
-                className="min-h-[384px] rounded-lg border border-neutral-300 p-4 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
+                className="flex flex-col min-h-[384px] rounded-lg border border-neutral-300 p-4 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="relative aspect-[16/9] w-full overflow-hidden rounded-md">
                   <Image
@@ -142,25 +142,27 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="mt-5">
+                <div className="mt-5 flex flex-1 flex-col">
                   <h2 className="font-heading text-xl font-semibold tracking-wide">
                     {work.title}
                   </h2>
 
                   <p className="mt-1 text-sm">{work.description}</p>
 
-                  <div className="mt-6 flex flex-col items-center gap-3">
-                    {work.links.map((link) => (
-                      <a
-                        key={link.label}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex h-10 w-32 items-center justify-center rounded-full bg-black font-heading text-sm tracking-wide text-white transition hover:opacity-60"
-                      >
-                        {link.label}
-                      </a>
-                    ))}
+                  <div className="mt-auto pt-6">
+                    <div className="flex min-h-[144px] flex-col items-center gap-3">
+                      {work.links.map((link) => (
+                        <a
+                          key={link.label}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex h-10 w-32 items-center justify-center rounded-full bg-black font-heading text-sm tracking-wide text-white transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                        >
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </article>
