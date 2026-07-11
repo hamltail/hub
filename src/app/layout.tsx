@@ -14,8 +14,9 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Hub",
-  description: "The hub of hamltail.",
+  metadataBase: new URL("https://hub.hamltail.dev"),
+  title: "Portfolio | h-waji / hamltail",
+  description: "Web制作・UI設計・個人開発の制作物を掲載したポートフォリオサイト。",
 };
 
 export default function RootLayout({
