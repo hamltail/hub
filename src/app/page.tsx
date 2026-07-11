@@ -109,7 +109,7 @@ export default function Home() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-heading text-sm transition hover:opacity-60"
+                  className="nav-link font-heading transition hover:opacity-60"
                 >
                   {link.label}
                 </a>
@@ -125,7 +125,7 @@ export default function Home() {
             {works.map((work) => (
               <article
                 key={work.title}
-                className="min-h-[384px] rounded-lg border border-neutral-300 p-4"
+                className="min-h-[384px] rounded-lg border border-neutral-300 p-4 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="relative aspect-[16/9] w-full overflow-hidden rounded-md">
                   <Image
@@ -150,7 +150,7 @@ export default function Home() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex h-10 w-32 items-center justify-center rounded-full bg-black font-heading text-sm tracking-wide text-white transition hover:opacity-80"
+                        className="flex h-10 w-32 items-center justify-center rounded-full bg-black font-heading text-sm tracking-wide text-white transition hover:opacity-60"
                       >
                         {link.label}
                       </a>
