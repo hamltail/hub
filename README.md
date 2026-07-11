@@ -1,14 +1,14 @@
-# Hub
+# Portfolio
 
-The hub of hamltail.
+Web制作・UI設計・個人開発の制作物を掲載したポートフォリオサイトです。
 
 ## Live Demo
 
-🌐 制作中
+🌐 [Webサイトを見る](https://hub.hamltail.dev)
 
 ## Design
 
-🎨 制作中
+🎨 [Figmaデザインを見る](https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/Public?node-id=2147-128&p=f)
 
 ## Tech Stack
 
