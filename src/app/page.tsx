@@ -21,21 +21,17 @@ const externalLinks = [
 
 const works = [
   {
-    title: "Animal Corporation",
-    description: "架空企業のコーポレートサイト",
-    image: animalCorporationImage,
+    title: "Pawth",
+    description: "小さなWeb日記アプリ",
+    image: pawthImage,
     links: [
       {
         label: "Webサイト",
-        href: "https://animal.hamltail.dev",
-      },
-      {
-        label: "Figma",
-        href: "https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/Public?node-id=2003-267&p=f",
+        href: "https://pawth-lp.hamltail.dev",
       },
       {
         label: "GitHub",
-        href: "https://github.com/hamltail/corporate-site-demo",
+        href: "https://github.com/hamltail/Pawth",
       },
     ],
   },
@@ -59,6 +55,25 @@ const works = [
     ],
   },
   {
+    title: "Animal Corporation",
+    description: "架空企業のコーポレートサイト",
+    image: animalCorporationImage,
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://animal.hamltail.dev",
+      },
+      {
+        label: "Figma",
+        href: "https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/Public?node-id=2003-267&p=f",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/corporate-site-demo",
+      },
+    ],
+  },
+  {
     title: "Portfolio Site",
     description: "制作物を掲載したポートフォリオサイト",
     image: portfolioSiteImage,
@@ -70,21 +85,6 @@ const works = [
       {
         label: "GitHub",
         href: "https://github.com/hamltail/hub",
-      },
-    ],
-  },
-  {
-    title: "Pawth",
-    description: "小さなWeb日記アプリ",
-    image: pawthImage,
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://pawth-lp.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/Pawth",
       },
     ],
   },
