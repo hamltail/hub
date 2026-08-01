@@ -21,42 +21,8 @@ const externalLinks = [
 
 const works = [
   {
-    title: "Pawth",
-    description: "小さなWeb日記アプリ",
-    image: pawthImage,
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://pawth-lp.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/Pawth",
-      },
-    ],
-  },
-  {
-    title: "Interaction Lab",
-    description: "Web制作・UI実験のアトリエ",
-    image: interactionLabImage,
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://lab.hamltail.dev",
-      },
-      {
-        label: "Figma",
-        href: "https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/Public?node-id=2038-128&p=f",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/interaction-lab",
-      },
-    ],
-  },
-  {
     title: "Animal Corporation",
-    description: "架空企業のコーポレートサイト",
+    description: "Figmaで設計し、Next.jsで実装したコーポレートサイト",
     image: animalCorporationImage,
     links: [
       {
@@ -74,8 +40,42 @@ const works = [
     ],
   },
   {
+    title: "Interaction Lab",
+    description: "Webならではの表現とインタラクションを探求する実験サイト",
+    image: interactionLabImage,
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://lab.hamltail.dev",
+      },
+      {
+        label: "Figma",
+        href: "https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/Public?node-id=2038-128&p=f",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/interaction-lab",
+      },
+    ],
+  },
+  {
+    title: "Pawth",
+    description: "1日1投稿の制約を設けた、小さなWeb日記アプリ",
+    image: pawthImage,
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://pawth-lp.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/Pawth",
+      },
+    ],
+  },
+  {
     title: "Portfolio Site",
-    description: "制作物を掲載したポートフォリオサイト",
+    description: "Figmaで設計し、Next.jsで実装したポートフォリオサイト",
     image: portfolioSiteImage,
     links: [
       {
