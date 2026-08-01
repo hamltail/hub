@@ -21,42 +21,8 @@ const externalLinks = [
 
 const works = [
   {
-    title: "Pawth",
-    description: "小さなWeb日記アプリ",
-    image: pawthImage,
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://pawth-lp.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/Pawth",
-      },
-    ],
-  },
-  {
-    title: "Interaction Lab",
-    description: "Web制作・UI実験のアトリエ",
-    image: interactionLabImage,
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://lab.hamltail.dev",
-      },
-      {
-        label: "Figma",
-        href: "https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/Public?node-id=2038-128&p=f",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/interaction-lab",
-      },
-    ],
-  },
-  {
     title: "Animal Corporation",
-    description: "架空企業のコーポレートサイト",
+    description: "Figmaで設計し、Next.jsで実装したコーポレートサイト",
     image: animalCorporationImage,
     links: [
       {
@@ -74,8 +40,42 @@ const works = [
     ],
   },
   {
+    title: "Interaction Lab",
+    description: "Webならではの表現とインタラクションを探求する実験サイト",
+    image: interactionLabImage,
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://lab.hamltail.dev",
+      },
+      {
+        label: "Figma",
+        href: "https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/Public?node-id=2038-128&p=f",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/interaction-lab",
+      },
+    ],
+  },
+  {
+    title: "Pawth",
+    description: "1日1投稿の制約を設けた、小さなWeb日記アプリ",
+    image: pawthImage,
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://pawth-lp.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/Pawth",
+      },
+    ],
+  },
+  {
     title: "Portfolio Site",
-    description: "制作物を掲載したポートフォリオサイト",
+    description: "Figmaで設計し、Next.jsで実装したポートフォリオサイト",
     image: portfolioSiteImage,
     links: [
       {
@@ -87,6 +87,21 @@ const works = [
         href: "https://github.com/hamltail/hub",
       },
     ],
+  },
+];
+
+const technicalSandboxes = [
+  {
+    title: "Next.js Sandbox",
+    description:
+      "Next.jsとPrismaを用いた技術検証プロジェクト",
+    github: "https://github.com/hamltail/nextjs-sandbox",
+  },
+  {
+    title: "Auth Sandbox",
+    description:
+      "Auth.jsとBetter Authを比較・検証した認証プロジェクト",
+    github: "https://github.com/hamltail/auth-sandbox",
   },
 ];
 
@@ -125,7 +140,10 @@ export default function Home() {
 
       <section className="px-7 pt-8 md:px-11 min-[1200px]:px-0">
         <div className="mx-auto w-full max-w-[1120px]">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 min-[1200px]:grid-cols-3 min-[1200px]:gap-8">
+          <h2 className="font-heading text-3xl font-semibold tracking-wide">
+            Projects
+          </h2>
+          <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 min-[1200px]:grid-cols-3 min-[1200px]:gap-8">
             {works.map((work) => (
               <article
                 key={work.title}
@@ -171,10 +189,49 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="px-7 pt-16 md:px-11 md:pt-24 min-[1200px]:px-0">
+        <div className="mx-auto w-full max-w-[1120px]">
+          <h2 className="font-heading text-3xl font-semibold tracking-wide">
+            Technical Sandbox
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm text-neutral-600">
+            学習・比較・技術検証を目的として制作したプロジェクトです。
+          </p>
+
+          <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2">
+            {technicalSandboxes.map((sandbox) => (
+              <article
+                key={sandbox.title}
+                className="flex min-h-[180px] flex-col rounded-lg border border-neutral-300 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
+              >
+                <h3 className="font-heading text-xl font-semibold tracking-wide">
+                  {sandbox.title}
+                </h3>
+
+                <p className="mt-2 text-sm">
+                  {sandbox.description}
+                </p>
+
+                <div className="mt-auto pt-6">
+                  <a
+                    href={sandbox.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mx-auto flex h-10 w-32 items-center justify-center rounded-full bg-black font-heading text-sm tracking-wide text-white transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <footer className="px-7 pb-6 pt-16 md:px-11 md:pt-24 min-[1200px]:px-0">
         <div className="mx-auto w-full max-w-[1120px] text-center">
           <small className="font-heading tracking-wide">
-            © 2026 h-waji / hamltail
+            © {new Date().getFullYear()} h-waji / hamltail
           </small>
         </div>
       </footer>
