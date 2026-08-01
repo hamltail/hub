@@ -231,7 +231,7 @@ export default function Home() {
       <footer className="px-7 pb-6 pt-16 md:px-11 md:pt-24 min-[1200px]:px-0">
         <div className="mx-auto w-full max-w-[1120px] text-center">
           <small className="font-heading tracking-wide">
-            © 2026 h-waji / hamltail
+            © {new Date().getFullYear()} h-waji / hamltail
           </small>
         </div>
       </footer>
