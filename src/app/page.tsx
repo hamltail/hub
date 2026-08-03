@@ -93,14 +93,12 @@ const works = [
 const technicalSandboxes = [
   {
     title: "Next.js Sandbox",
-    description:
-      "Next.jsとPrismaを用いた技術検証プロジェクト",
+    description: "Next.jsとPrismaを用いた技術検証プロジェクト",
     github: "https://github.com/hamltail/nextjs-sandbox",
   },
   {
     title: "Auth Sandbox",
-    description:
-      "Auth.jsとBetter Authを比較・検証した認証プロジェクト",
+    description: "Auth.jsとBetter Authを検証した認証プロジェクト",
     github: "https://github.com/hamltail/auth-sandbox",
   },
 ];
@@ -143,7 +141,7 @@ export default function Home() {
           <h2 className="font-heading text-3xl font-semibold tracking-wide">
             Projects
           </h2>
-          <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 min-[1200px]:grid-cols-3 min-[1200px]:gap-8">
+          <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 min-[1200px]:gap-8">
             {works.map((work) => (
               <article
                 key={work.title}
@@ -155,15 +153,15 @@ export default function Home() {
                     alt={work.title}
                     fill
                     placeholder="blur"
-                    sizes="(min-width: 1200px) 352px, (min-width: 768px) 328px, calc(100vw - 56px)"
+                    sizes="(min-width: 1200px) 544px, (min-width: 768px) calc((100vw - 112px) / 2), calc(100vw - 56px)"
                     className="object-cover"
                   />
                 </div>
 
                 <div className="mt-5 flex flex-1 flex-col">
-                  <h2 className="font-heading text-xl font-semibold tracking-wide">
+                  <h3 className="font-heading text-xl font-semibold tracking-wide">
                     {work.title}
-                  </h2>
+                  </h3>
 
                   <p className="mt-1 text-sm">{work.description}</p>
 
@@ -195,10 +193,10 @@ export default function Home() {
             Technical Sandbox
           </h2>
           <p className="mt-4 max-w-2xl text-sm text-neutral-600">
-            学習・比較・技術検証を目的として制作したプロジェクトです。
+            技術検証を目的として制作したプロジェクトです。
           </p>
 
-          <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 min-[1200px]:gap-8">
             {technicalSandboxes.map((sandbox) => (
               <article
                 key={sandbox.title}
