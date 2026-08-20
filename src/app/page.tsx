@@ -1,4 +1,7 @@
 import Image from "next/image";
+
+import Container from "@/components/Container";
+
 import animalCorporationImage from "../../public/images/works/animal-corporation.webp";
 import interactionLabImage from "../../public/images/works/interaction-lab.webp";
 import portfolioSiteImage from "../../public/images/works/portfolio-site.webp";
@@ -122,7 +125,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <section className="px-7 pt-8 md:px-11 md:pt-16 min-[1200px]:px-0">
-        <div className="mx-auto w-full max-w-[1120px]">
+        <Container>
           <h1 className="font-heading text-6xl font-semibold tracking-[0.08em]">
             Portfolio
           </h1>
@@ -131,6 +134,7 @@ export default function Home() {
             <p className="font-heading text-xl font-semibold tracking-wide">
               h-waji / hamltail
             </p>
+
             <div
               className="mt-3 flex items-center gap-4"
               aria-label="External links"
@@ -148,14 +152,15 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className="px-7 pt-12 md:px-11 min-[1200px]:px-0">
-        <div className="mx-auto w-full max-w-[1120px]">
+        <Container>
           <h2 className="font-heading text-3xl font-semibold tracking-wide">
             Technical Sandbox
           </h2>
+
           <p className="mt-4 max-w-2xl text-sm text-neutral-600">
             技術検証を目的として制作したプロジェクトです。
           </p>
@@ -190,19 +195,20 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className="px-7 pt-12 md:px-11 min-[1200px]:px-0">
-        <div className="mx-auto w-full max-w-[1120px]">
+        <Container>
           <h2 className="font-heading text-3xl font-semibold tracking-wide">
             Projects
           </h2>
+
           <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 min-[1200px]:gap-8">
             {works.map((work) => (
               <article
                 key={work.title}
-                className="flex flex-col min-h-[384px] rounded-lg border border-neutral-300 p-4 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
+                className="flex min-h-[384px] flex-col rounded-lg border border-neutral-300 p-4 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="relative aspect-[16/9] w-full overflow-hidden rounded-md">
                   <Image
@@ -241,15 +247,17 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       <footer className="px-7 pb-6 pt-16 md:px-11 md:pt-24 min-[1200px]:px-0">
-        <div className="mx-auto w-full max-w-[1120px] text-center">
-          <small className="font-heading tracking-wide">
-            © {new Date().getFullYear()} h-waji / hamltail
-          </small>
-        </div>
+        <Container>
+          <div className="text-center">
+            <small className="font-heading tracking-wide">
+              © {new Date().getFullYear()} h-waji / hamltail
+            </small>
+          </div>
+        </Container>
       </footer>
     </main>
   );
