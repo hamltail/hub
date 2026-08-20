@@ -126,7 +126,7 @@ export default function Home() {
           <h1 className="font-heading text-6xl font-semibold tracking-[0.08em]">
             Portfolio
           </h1>
-          
+
           <div className="mt-14">
             <p className="font-heading text-xl font-semibold tracking-wide">
               h-waji / hamltail
@@ -170,9 +170,7 @@ export default function Home() {
                   {sandbox.title}
                 </h3>
 
-                <p className="mt-2 text-sm">
-                  {sandbox.description}
-                </p>
+                <p className="mt-2 text-sm">{sandbox.description}</p>
 
                 <div className="pt-6">
                   <div className="flex flex-col items-center gap-3">
