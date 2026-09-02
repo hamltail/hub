@@ -12,17 +12,45 @@ Web制作・UI設計・個人開発の制作物を掲載したポートフォリ
 
 ## Tech Stack
 
-- Figma
-- Next.js
-- TypeScript
-- Tailwind CSS
-- Vercel
+| Category       | Technologies                             |
+| -------------- | ---------------------------------------- |
+| Design         | Figma                                    |
+| Frontend       | Next.js, React, TypeScript, Tailwind CSS |
+| Infrastructure | Docker, Vercel                           |
+
+## Docker
+
+### Build
+
+```bash
+docker build -t hub .
+```
+
+### Start
+
+```bash
+docker run --rm --name hub -p 3000:3000 hub
+```
+
+### Check
+
+```bash
+docker ps
+```
+
+### Stop
+
+```bash
+docker stop hub
+```
+
+`--rm` を指定しているため、停止したコンテナは自動的に削除されます。
 
 ## License
 
 このリポジトリはポートフォリオ目的で公開しています。
 
-著作権は作者に帰属します。
+著作権は作者に帰属します。  
 無断転載・再配布・商用利用はご遠慮ください。
 
 This repository is published for portfolio purposes only.
