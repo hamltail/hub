@@ -2,6 +2,8 @@
   "name": "hub",
   "version": "0.1.0",
   "private": true,
+  "description": "Portfolio website showcasing web development, UI design, and personal projects",
+  "author": "h-waji (hamltail)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,22 +12,35 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "test": "npm run format:check && npm run lint && npm run typecheck"
+    "test": "npm run format:check && npm run lint && npm run typecheck && npm run build && npm run test:unit && npm run test:e2e && npm run test:lighthouse && npm run test:mutation",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "test:lighthouse": "lhci autorun",
+    "test:mutation": "stryker run"
   },
   "dependencies": {
-    "next": "16.2.10",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "next": "^16.3.4",
+    "next-intl": "^4.14.2",
+    "next-themes": "^0.4.6",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.10",
+    "@axe-core/playwright": "^4.13.0",
+    "@lhci/cli": "^0.15.1",
+    "@playwright/test": "^1.62.1",
+    "@stryker-mutator/core": "^10.0.0",
+    "@stryker-mutator/typescript-checker": "^10.0.0",
+    "@stryker-mutator/vitest-runner": "^10.0.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.4",
     "prettier": "^3.9.6",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.11"
   }
 }

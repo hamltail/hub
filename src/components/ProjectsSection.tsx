@@ -1,17 +1,13 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import Container from "@/components/Container";
-
-import animalCorporationImage from "../../public/images/works/animal-corporation.webp";
-import interactionLabImage from "../../public/images/works/interaction-lab.webp";
-import portfolioSiteImage from "../../public/images/works/portfolio-site.webp";
-import pawthImage from "../../public/images/works/pawth.webp";
 
 const works = [
   {
     title: "Pawth",
-    description: "1日1投稿の制約を設けた、小さなWeb日記アプリ",
-    image: pawthImage,
+    descriptionKey: "pawth.description",
+    image: "/images/works/pawth.webp",
     links: [
       {
         label: "Webサイト",
@@ -25,8 +21,8 @@ const works = [
   },
   {
     title: "Animal Corporation",
-    description: "Figmaで設計し、Next.jsで実装したコーポレートサイト",
-    image: animalCorporationImage,
+    descriptionKey: "animalCorporation.description",
+    image: "/images/works/animal-corporation.webp",
     links: [
       {
         label: "Webサイト",
@@ -44,8 +40,8 @@ const works = [
   },
   {
     title: "Interaction Lab",
-    description: "Webならではの表現とインタラクションを探求する実験サイト",
-    image: interactionLabImage,
+    descriptionKey: "interactionLab.description",
+    image: "/images/works/interaction-lab.webp",
     links: [
       {
         label: "Webサイト",
@@ -63,8 +59,8 @@ const works = [
   },
   {
     title: "Portfolio Site",
-    description: "Figmaで設計し、Next.jsで実装したポートフォリオサイト",
-    image: portfolioSiteImage,
+    descriptionKey: "portfolioSite.description",
+    image: "/images/works/portfolio-site.webp",
     links: [
       {
         label: "Figma",
@@ -76,9 +72,11 @@ const works = [
       },
     ],
   },
-];
+] as const;
 
 export default function ProjectsSection() {
+  const t = useTranslations("Projects");
+
   return (
     <section className="px-7 pt-12 md:px-11 min-[1200px]:px-0">
       <Container>
@@ -87,17 +85,17 @@ export default function ProjectsSection() {
         </h2>
 
         <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 min-[1200px]:gap-8">
-          {works.map((work) => (
+          {works.map((work, index) => (
             <article
               key={work.title}
-              className="flex min-h-[384px] flex-col rounded-lg border border-neutral-300 p-4 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
+              className="border-border flex min-h-96 flex-col rounded-lg border p-4 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-md">
+              <div className="relative aspect-video w-full overflow-hidden rounded-md">
                 <Image
                   src={work.image}
                   alt={work.title}
                   fill
-                  placeholder="blur"
+                  loading={index === 0 ? "eager" : undefined}
                   sizes="(min-width: 1200px) 544px, (min-width: 768px) calc((100vw - 112px) / 2), calc(100vw - 56px)"
                   className="object-cover"
                 />
@@ -108,19 +106,19 @@ export default function ProjectsSection() {
                   {work.title}
                 </h3>
 
-                <p className="mt-1 text-sm">{work.description}</p>
+                <p className="mt-1 text-sm">{t(work.descriptionKey)}</p>
 
                 <div className="mt-auto pt-6">
-                  <div className="flex min-h-[144px] flex-col items-center gap-3">
+                  <div className="flex min-h-36 flex-col items-center gap-3">
                     {work.links.map((link) => (
                       <a
                         key={link.label}
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex h-10 w-32 items-center justify-center rounded-full bg-black font-heading text-sm tracking-wide text-white transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                        className="bg-primary text-primary-foreground focus-visible:outline-primary flex h-10 w-32 items-center justify-center rounded-full font-heading text-sm tracking-wide transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2"
                       >
-                        {link.label}
+                        {link.label === "Webサイト" ? t("webSite") : link.label}
                       </a>
                     ))}
                   </div>

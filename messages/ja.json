@@ -1,0 +1,38 @@
+{
+  "Metadata": {
+    "description": "Web制作・UI設計・個人開発の制作物を掲載したポートフォリオサイト。"
+  },
+  "Experiments": {
+    "description": "技術検証を目的として制作したプロジェクトです。",
+    "webSite": "Webサイト",
+    "webLab": {
+      "description": "Next.jsをベースに、Web開発・UI/UXデザイン・品質改善などを、実際に作りながら検証するプロジェクト"
+    },
+    "authSandbox": {
+      "description": "Next.jsをベースに、Auth.jsとBetter Authを検証した認証プロジェクト"
+    }
+  },
+  "Projects": {
+    "pawth": {
+      "description": "1日1投稿の制約で、日々の記録を続ける小さなWeb日記アプリ"
+    },
+    "animalCorporation": {
+      "description": "Figmaでデザインし、Next.jsで実装したコーポレートサイト"
+    },
+    "interactionLab": {
+      "description": "Webならではの表現とインタラクションを探求する実験サイト"
+    },
+    "portfolioSite": {
+      "description": "Figmaでデザインし、Next.jsで実装したポートフォリオサイト"
+    },
+    "webSite": "Webサイト"
+  },
+  "ThemeSwitcher": {
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム"
+  },
+  "BackToTop": {
+    "label": "ページ上部へ戻る"
+  }
+}

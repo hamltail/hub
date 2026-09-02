@@ -1,0 +1,38 @@
+{
+  "Metadata": {
+    "description": "A portfolio showcasing web development, UI design, and personal projects."
+  },
+  "Experiments": {
+    "description": "Projects created to explore and evaluate technologies.",
+    "webSite": "Website",
+    "webLab": {
+      "description": "A project for exploring web development, UI/UX design, and quality improvements with Next.js through hands-on development."
+    },
+    "authSandbox": {
+      "description": "An authentication project built with Next.js to explore Auth.js and Better Auth."
+    }
+  },
+  "Projects": {
+    "pawth": {
+      "description": "A small web journal app for keeping a daily record with a one-post-per-day limit."
+    },
+    "animalCorporation": {
+      "description": "A corporate website designed in Figma and built with Next.js."
+    },
+    "interactionLab": {
+      "description": "An experimental website exploring interactions and expressions unique to the web."
+    },
+    "portfolioSite": {
+      "description": "A portfolio website designed in Figma and built with Next.js."
+    },
+    "webSite": "Website"
+  },
+  "ThemeSwitcher": {
+    "light": "Light theme",
+    "dark": "Dark theme",
+    "system": "System theme"
+  },
+  "BackToTop": {
+    "label": "Back to top"
+  }
+}
