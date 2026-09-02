@@ -16,6 +16,7 @@ Web制作・UI設計・個人開発の制作物を掲載したポートフォリ
 | -------------- | ---------------------------------------- |
 | Design         | Figma                                    |
 | Frontend       | Next.js, React, TypeScript, Tailwind CSS |
+| Testing        | Playwright, Lighthouse CI                |
 | Infrastructure | Docker, Vercel, GitHub Actions           |
 
 ## Docker

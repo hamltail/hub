@@ -29,6 +29,9 @@ next-env.d.ts
 /playwright/.cache/
 /playwright/.auth/
 
+# Lighthouse CI
+/.lighthouseci/
+
 # Logs
 npm-debug.log*
 yarn-debug.log*

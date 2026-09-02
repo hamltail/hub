@@ -13,7 +13,8 @@
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
     "test": "npm run format:check && npm run lint && npm run typecheck && npm run build",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:lighthouse": "lhci autorun"
   },
   "dependencies": {
     "next": "^16.3.4",
@@ -22,6 +23,7 @@
     "react-dom": "^19.2.8"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^26.4.1",
