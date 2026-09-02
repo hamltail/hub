@@ -90,9 +90,9 @@ export default function ProjectsSection() {
           {works.map((work) => (
             <article
               key={work.title}
-              className="border-border bg-surface flex min-h-[384px] flex-col rounded-lg border p-4 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
+              className="border-border bg-surface flex min-h-96 flex-col rounded-lg border p-4 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-md">
+              <div className="relative aspect-video w-full overflow-hidden rounded-md">
                 <Image
                   src={work.image}
                   alt={work.title}
@@ -111,7 +111,7 @@ export default function ProjectsSection() {
                 <p className="mt-1 text-sm">{work.description}</p>
 
                 <div className="mt-auto pt-6">
-                  <div className="flex min-h-[144px] flex-col items-center gap-3">
+                  <div className="flex min-h-36 flex-col items-center gap-3">
                     {work.links.map((link) => (
                       <a
                         key={link.label}

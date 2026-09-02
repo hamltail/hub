@@ -44,7 +44,7 @@ export default function TechnicalSandboxSection() {
           {technicalSandboxes.map((sandbox) => (
             <article
               key={sandbox.title}
-              className="border-border bg-surface flex min-h-[180px] flex-col rounded-lg border p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
+              className="border-border bg-surface flex min-h-45 flex-col rounded-lg border p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
             >
               <h3 className="font-heading text-xl font-semibold tracking-wide">
                 {sandbox.title}
