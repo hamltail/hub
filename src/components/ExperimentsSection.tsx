@@ -1,10 +1,10 @@
 import Container from "@/components/Container";
 
-const technicalSandboxes = [
+const experiments = [
   {
-    title: "Next.js Sandbox",
+    title: "Web Lab",
     description:
-      "Next.js / Prismaを中心に、認証・DB・外部ストレージ連携・テスト・CIなどを実装した技術検証プロジェクト",
+      "Next.jsをベースに、Web開発・UI/UXデザイン・品質改善などを、実際に作りながら検証するプロジェクト",
     links: [
       {
         label: "Webサイト",
@@ -18,7 +18,8 @@ const technicalSandboxes = [
   },
   {
     title: "Auth Sandbox",
-    description: "Auth.jsとBetter Authを検証した認証プロジェクト",
+    description:
+      "Next.jsをベースに、Auth.jsとBetter Authを検証した認証プロジェクト",
     links: [
       {
         label: "GitHub",
@@ -28,12 +29,12 @@ const technicalSandboxes = [
   },
 ];
 
-export default function TechnicalSandboxSection() {
+export default function ExperimentsSection() {
   return (
     <section className="px-7 pt-12 md:px-11 min-[1200px]:px-0">
       <Container>
         <h2 className="font-heading text-3xl font-semibold tracking-wide">
-          Technical Sandbox
+          Experiments
         </h2>
 
         <p className="text-muted mt-4 max-w-2xl text-sm">
@@ -41,20 +42,20 @@ export default function TechnicalSandboxSection() {
         </p>
 
         <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 min-[1200px]:gap-8">
-          {technicalSandboxes.map((sandbox) => (
+          {experiments.map((experiment) => (
             <article
-              key={sandbox.title}
+              key={experiment.title}
               className="border-border bg-surface flex min-h-45 flex-col rounded-lg border p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
             >
               <h3 className="font-heading text-xl font-semibold tracking-wide">
-                {sandbox.title}
+                {experiment.title}
               </h3>
 
-              <p className="mt-2 text-sm">{sandbox.description}</p>
+              <p className="mt-2 text-sm">{experiment.description}</p>
 
               <div className="pt-6">
                 <div className="flex flex-col items-center gap-3">
-                  {sandbox.links.map((link) => (
+                  {experiment.links.map((link) => (
                     <a
                       key={link.label}
                       href={link.href}

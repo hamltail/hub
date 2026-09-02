@@ -5,7 +5,7 @@ import Container from "@/components/Container";
 const works = [
   {
     title: "Pawth",
-    description: "1日1投稿の制約を設けた、小さなWeb日記アプリ",
+    description: "1日1投稿の制約で、日々の記録を続ける小さなWeb日記アプリ",
     image: "/images/works/pawth.webp",
     links: [
       {
@@ -20,7 +20,7 @@ const works = [
   },
   {
     title: "Animal Corporation",
-    description: "Figmaで設計し、Next.jsで実装したコーポレートサイト",
+    description: "Figmaでデザインし、Next.jsで実装したコーポレートサイト",
     image: "/images/works/animal-corporation.webp",
     links: [
       {
@@ -58,7 +58,7 @@ const works = [
   },
   {
     title: "Portfolio Site",
-    description: "Figmaで設計し、Next.jsで実装したポートフォリオサイト",
+    description: "Figmaでデザインし、Next.jsで実装したポートフォリオサイト",
     image: "/images/works/portfolio-site.webp",
     links: [
       {
