@@ -1,10 +1,11 @@
+import { useTranslations } from "next-intl";
+
 import Container from "@/components/Container";
 
 const experiments = [
   {
     title: "Web Lab",
-    description:
-      "Next.jsをベースに、Web開発・UI/UXデザイン・品質改善などを、実際に作りながら検証するプロジェクト",
+    descriptionKey: "webLab.description",
     links: [
       {
         label: "Webサイト",
@@ -18,8 +19,7 @@ const experiments = [
   },
   {
     title: "Auth Sandbox",
-    description:
-      "Next.jsをベースに、Auth.jsとBetter Authを検証した認証プロジェクト",
+    descriptionKey: "authSandbox.description",
     links: [
       {
         label: "GitHub",
@@ -27,9 +27,11 @@ const experiments = [
       },
     ],
   },
-];
+] as const;
 
 export default function ExperimentsSection() {
+  const t = useTranslations("Experiments");
+
   return (
     <section className="px-7 pt-12 md:px-11 min-[1200px]:px-0">
       <Container>
@@ -37,9 +39,7 @@ export default function ExperimentsSection() {
           Experiments
         </h2>
 
-        <p className="text-muted mt-4 max-w-2xl text-sm">
-          技術検証を目的として制作したプロジェクトです。
-        </p>
+        <p className="text-muted mt-4 max-w-2xl text-sm">{t("description")}</p>
 
         <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 min-[1200px]:gap-8">
           {experiments.map((experiment) => (
@@ -51,7 +51,7 @@ export default function ExperimentsSection() {
                 {experiment.title}
               </h3>
 
-              <p className="mt-2 text-sm">{experiment.description}</p>
+              <p className="mt-2 text-sm">{t(experiment.descriptionKey)}</p>
 
               <div className="pt-6">
                 <div className="flex flex-col items-center gap-3">
@@ -63,7 +63,7 @@ export default function ExperimentsSection() {
                       rel="noopener noreferrer"
                       className="bg-primary text-primary-foreground flex h-10 w-32 items-center justify-center rounded-full font-heading text-sm tracking-wide transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
-                      {link.label}
+                      {link.label === "Webサイト" ? t("webSite") : link.label}
                     </a>
                   ))}
                 </div>

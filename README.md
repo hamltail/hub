@@ -15,7 +15,7 @@ Web制作・UI設計・個人開発の制作物を掲載したポートフォリ
 | Category       | Technologies                                             |
 | -------------- | -------------------------------------------------------- |
 | Design         | Figma                                                    |
-| Frontend       | Next.js, React, TypeScript, Tailwind CSS                 |
+| Frontend       | Next.js, React, TypeScript, Tailwind CSS, next-intl      |
 | Testing        | Playwright, Lighthouse CI, k6, Vitest, Stryker, axe-core |
 | Security       | OWASP ZAP, CodeQL                                        |
 | Infrastructure | Docker, Vercel, GitHub Actions                           |

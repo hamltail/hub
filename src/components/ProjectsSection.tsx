@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import Container from "@/components/Container";
 
 const works = [
   {
     title: "Pawth",
-    description: "1日1投稿の制約で、日々の記録を続ける小さなWeb日記アプリ",
+    descriptionKey: "pawth.description",
     image: "/images/works/pawth.webp",
     links: [
       {
@@ -20,7 +21,7 @@ const works = [
   },
   {
     title: "Animal Corporation",
-    description: "Figmaでデザインし、Next.jsで実装したコーポレートサイト",
+    descriptionKey: "animalCorporation.description",
     image: "/images/works/animal-corporation.webp",
     links: [
       {
@@ -39,7 +40,7 @@ const works = [
   },
   {
     title: "Interaction Lab",
-    description: "Webならではの表現とインタラクションを探求する実験サイト",
+    descriptionKey: "interactionLab.description",
     image: "/images/works/interaction-lab.webp",
     links: [
       {
@@ -58,7 +59,7 @@ const works = [
   },
   {
     title: "Portfolio Site",
-    description: "Figmaでデザインし、Next.jsで実装したポートフォリオサイト",
+    descriptionKey: "portfolioSite.description",
     image: "/images/works/portfolio-site.webp",
     links: [
       {
@@ -71,9 +72,11 @@ const works = [
       },
     ],
   },
-];
+] as const;
 
 export default function ProjectsSection() {
+  const t = useTranslations("Projects");
+
   return (
     <section className="px-7 pt-12 md:px-11 min-[1200px]:px-0">
       <Container>
@@ -103,7 +106,7 @@ export default function ProjectsSection() {
                   {work.title}
                 </h3>
 
-                <p className="mt-1 text-sm">{work.description}</p>
+                <p className="mt-1 text-sm">{t(work.descriptionKey)}</p>
 
                 <div className="mt-auto pt-6">
                   <div className="flex min-h-36 flex-col items-center gap-3">
@@ -115,7 +118,7 @@ export default function ProjectsSection() {
                         rel="noopener noreferrer"
                         className="bg-primary text-primary-foreground focus-visible:outline-primary flex h-10 w-32 items-center justify-center rounded-full font-heading text-sm tracking-wide transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2"
                       >
-                        {link.label}
+                        {link.label === "Webサイト" ? t("webSite") : link.label}
                       </a>
                     ))}
                   </div>

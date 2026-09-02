@@ -1,10 +1,12 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 import { shouldShowBackToTop } from "@/lib/scroll";
 
 export default function BackToTop() {
+  const t = useTranslations("BackToTop");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -36,7 +38,7 @@ export default function BackToTop() {
     <button
       type="button"
       onClick={scrollToTop}
-      aria-label="ページ上部へ戻る"
+      aria-label={t("label")}
       className="group fixed right-6 bottom-6 z-50 flex size-12 items-center justify-center rounded-full border border-primary bg-primary text-primary-foreground shadow-sm transition-transform duration-200 hover:-translate-y-1"
     >
       <svg
