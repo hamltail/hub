@@ -9,7 +9,6 @@ export default defineConfig({
 
   use: {
     baseURL: "http://localhost:3000",
-    locale: "ja-JP",
     trace: "on-first-retry",
     screenshot: "only-on-failure",
     video: "retain-on-failure",
@@ -17,9 +16,19 @@ export default defineConfig({
 
   projects: [
     {
-      name: "chromium",
+      name: "chromium-ja",
+      testIgnore: /i18n\.spec\.ts/,
       use: {
         ...devices["Desktop Chrome"],
+        locale: "ja-JP",
+      },
+    },
+    {
+      name: "chromium-en",
+      testMatch: /i18n\.spec\.ts/,
+      use: {
+        ...devices["Desktop Chrome"],
+        locale: "en-US",
       },
     },
   ],
