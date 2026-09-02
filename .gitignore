@@ -32,6 +32,9 @@ next-env.d.ts
 # Lighthouse CI
 /.lighthouseci/
 
+# Reports
+/reports/
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
