@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Noto_Sans_JP } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
 
 import ThemeProvider from "@/components/ThemeProvider";
 
@@ -51,11 +51,12 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
   const messages = await getMessages();
 
   return (
     <html
-      lang="ja"
+      lang={locale}
       suppressHydrationWarning
       className={`${notoSansJP.variable} ${barlowCondensed.variable}`}
     >
