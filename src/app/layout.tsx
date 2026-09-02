@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP, Barlow_Condensed } from "next/font/google";
+import { Barlow_Condensed, Noto_Sans_JP } from "next/font/google";
+
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
@@ -50,7 +51,7 @@ export default function RootLayout({
       lang="ja"
       className={`${notoSansJP.variable} ${barlowCondensed.variable}`}
     >
-      <body>{children}</body>
+      <body className="bg-background text-foreground">{children}</body>
     </html>
   );
 }

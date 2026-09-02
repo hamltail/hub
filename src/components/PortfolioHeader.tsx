@@ -38,7 +38,7 @@ export default function PortfolioHeader() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="nav-link font-heading transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                className="nav-link font-heading transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
               >
                 {link.label}
               </a>

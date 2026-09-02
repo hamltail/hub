@@ -36,7 +36,7 @@ export default function TechnicalSandboxSection() {
           Technical Sandbox
         </h2>
 
-        <p className="mt-4 max-w-2xl text-sm text-neutral-600">
+        <p className="text-muted mt-4 max-w-2xl text-sm">
           技術検証を目的として制作したプロジェクトです。
         </p>
 
@@ -44,7 +44,7 @@ export default function TechnicalSandboxSection() {
           {technicalSandboxes.map((sandbox) => (
             <article
               key={sandbox.title}
-              className="flex min-h-[180px] flex-col rounded-lg border border-neutral-300 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
+              className="border-border bg-surface flex min-h-[180px] flex-col rounded-lg border p-6 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
             >
               <h3 className="font-heading text-xl font-semibold tracking-wide">
                 {sandbox.title}
@@ -60,7 +60,7 @@ export default function TechnicalSandboxSection() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-10 w-32 items-center justify-center rounded-full bg-black font-heading text-sm tracking-wide text-white transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                      className="bg-primary text-primary-foreground flex h-10 w-32 items-center justify-center rounded-full font-heading text-sm tracking-wide transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     >
                       {link.label}
                     </a>

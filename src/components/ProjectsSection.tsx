@@ -90,7 +90,7 @@ export default function ProjectsSection() {
           {works.map((work) => (
             <article
               key={work.title}
-              className="flex min-h-[384px] flex-col rounded-lg border border-neutral-300 p-4 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
+              className="border-border bg-surface flex min-h-[384px] flex-col rounded-lg border p-4 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-md">
                 <Image
@@ -118,7 +118,7 @@ export default function ProjectsSection() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex h-10 w-32 items-center justify-center rounded-full bg-black font-heading text-sm tracking-wide text-white transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                        className="bg-primary text-primary-foreground flex h-10 w-32 items-center justify-center rounded-full font-heading text-sm tracking-wide transition hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                       >
                         {link.label}
                       </a>
