@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: t("description"),
       images: [
         {
-          url: "/og-image.png",
+          url: "/images/og-image.png",
           width: 1200,
           height: 630,
           alt: "Portfolio | h-waji / hamltail",
@@ -41,7 +41,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Portfolio | h-waji / hamltail",
       description: t("description"),
-      images: ["/og-image.png"],
+      images: ["/images/og-image.png"],
     },
   };
 }
