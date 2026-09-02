@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Noto_Sans_JP } from "next/font/google";
 
+import ThemeProvider from "@/components/ThemeProvider";
+
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
@@ -49,9 +51,12 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
+      suppressHydrationWarning
       className={`${notoSansJP.variable} ${barlowCondensed.variable}`}
     >
-      <body className="bg-background text-foreground">{children}</body>
+      <body className="bg-background text-foreground transition-colors duration-300">
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
