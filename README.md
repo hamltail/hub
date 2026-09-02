@@ -12,13 +12,13 @@ Web制作・UI設計・個人開発の制作物を掲載したポートフォリ
 
 ## Tech Stack
 
-| Category       | Technologies                                   |
-| -------------- | ---------------------------------------------- |
-| Design         | Figma                                          |
-| Frontend       | Next.js, React, TypeScript, Tailwind CSS       |
-| Testing        | Playwright, Lighthouse CI, k6, Vitest, Stryker |
-| Security       | OWASP ZAP, CodeQL                              |
-| Infrastructure | Docker, Vercel, GitHub Actions                 |
+| Category       | Technologies                                             |
+| -------------- | -------------------------------------------------------- |
+| Design         | Figma                                                    |
+| Frontend       | Next.js, React, TypeScript, Tailwind CSS                 |
+| Testing        | Playwright, Lighthouse CI, k6, Vitest, Stryker, axe-core |
+| Security       | OWASP ZAP, CodeQL                                        |
+| Infrastructure | Docker, Vercel, GitHub Actions                           |
 
 ## Docker
 
