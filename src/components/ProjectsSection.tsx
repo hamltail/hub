@@ -5,21 +5,6 @@ import Container from "@/components/Container";
 
 const works = [
   {
-    title: "Pawth",
-    descriptionKey: "pawth.description",
-    image: "/images/works/pawth.webp",
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://pawth-lp.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/Pawth",
-      },
-    ],
-  },
-  {
     title: "Animal Corporation",
     descriptionKey: "animalCorporation.description",
     image: "/images/works/animal-corporation.webp",
@@ -35,6 +20,36 @@ const works = [
       {
         label: "GitHub",
         href: "https://github.com/hamltail/corporate-site-demo",
+      },
+    ],
+  },
+  {
+    title: "Web Lab",
+    descriptionKey: "webLab.description",
+    image: "/images/works/web-lab.webp",
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://next.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/nextjs-sandbox",
+      },
+    ],
+  },
+  {
+    title: "Pawth",
+    descriptionKey: "pawth.description",
+    image: "/images/works/pawth.webp",
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://pawth-lp.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/Pawth",
       },
     ],
   },
@@ -80,7 +95,7 @@ export default function ProjectsSection() {
   return (
     <section className="px-7 pt-12 md:px-11 min-[1200px]:px-0">
       <Container>
-        <h2 className="font-heading text-3xl font-semibold tracking-wide">
+        <h2 className="heading-shadow font-heading text-3xl font-semibold tracking-wide">
           Projects
         </h2>
 
@@ -98,6 +113,7 @@ export default function ProjectsSection() {
                   loading={index === 0 ? "eager" : undefined}
                   sizes="(min-width: 1200px) 544px, (min-width: 768px) calc((100vw - 112px) / 2), calc(100vw - 56px)"
                   className="object-cover"
+                  draggable={false}
                 />
               </div>
 

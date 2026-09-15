@@ -5,12 +5,6 @@ type LinkExpectation = {
   href: string;
 };
 
-type ExperimentExpectation = {
-  title: string;
-  description: string;
-  links: LinkExpectation[];
-};
-
 type ProjectExpectation = {
   title: string;
   description: string;
@@ -33,51 +27,7 @@ const headerLinks: LinkExpectation[] = [
   },
 ];
 
-const experiments: ExperimentExpectation[] = [
-  {
-    title: "Web Lab",
-    description:
-      "Next.jsをベースに、Web開発・UI/UXデザイン・品質改善などを、実際に作りながら検証するプロジェクト",
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://next.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/nextjs-sandbox",
-      },
-    ],
-  },
-  {
-    title: "Auth Sandbox",
-    description:
-      "Next.jsをベースに、Auth.jsとBetter Authを検証した認証プロジェクト",
-    links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/auth-sandbox",
-      },
-    ],
-  },
-];
-
 const projects: ProjectExpectation[] = [
-  {
-    title: "Pawth",
-    description: "1日1投稿の制約で、日々の記録を続ける小さなWeb日記アプリ",
-    image: "/images/works/pawth.webp",
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://pawth-lp.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/Pawth",
-      },
-    ],
-  },
   {
     title: "Animal Corporation",
     description: "Figmaでデザインし、Next.jsで実装したコーポレートサイト",
@@ -94,6 +44,37 @@ const projects: ProjectExpectation[] = [
       {
         label: "GitHub",
         href: "https://github.com/hamltail/corporate-site-demo",
+      },
+    ],
+  },
+  {
+    title: "Web Lab",
+    description:
+      "Next.jsをベースに、Web開発・UI/UXデザイン・品質改善などを、実際に作りながら検証するプロジェクト",
+    image: "/images/works/web-lab.webp",
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://next.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/nextjs-sandbox",
+      },
+    ],
+  },
+  {
+    title: "Pawth",
+    description: "1日1投稿の制約で、日々の記録を続ける小さなWeb日記アプリ",
+    image: "/images/works/pawth.webp",
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://pawth-lp.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/Pawth",
       },
     ],
   },
@@ -215,20 +196,6 @@ test.describe("Portfolio", () => {
     await expect(
       page.getByRole("heading", {
         level: 2,
-        name: "Experiments",
-        exact: true,
-      }),
-    ).toBeVisible();
-
-    await expect(
-      page.getByText("技術検証を目的として制作したプロジェクトです。", {
-        exact: true,
-      }),
-    ).toBeVisible();
-
-    await expect(
-      page.getByRole("heading", {
-        level: 2,
         name: "Projects",
         exact: true,
       }),
@@ -245,41 +212,6 @@ test.describe("Portfolio", () => {
 
     for (const link of headerLinks) {
       await expectExternalLink(externalLinks, link);
-    }
-  });
-
-  test("Experimentsのタイトル・説明文・リンク構成が完全に一致する", async ({
-    page,
-  }) => {
-    for (const experiment of experiments) {
-      const article = getArticleByTitle(page, experiment.title);
-
-      await article.scrollIntoViewIfNeeded();
-
-      await expect(article).toHaveCount(1);
-      await expect(article).toBeVisible();
-
-      await expect(
-        article.getByRole("heading", {
-          level: 3,
-          name: experiment.title,
-          exact: true,
-        }),
-      ).toBeVisible();
-
-      await expect(
-        article.getByText(experiment.description, {
-          exact: true,
-        }),
-      ).toBeVisible();
-
-      await expect(article.getByRole("link")).toHaveCount(
-        experiment.links.length,
-      );
-
-      for (const link of experiment.links) {
-        await expectExternalLink(article, link);
-      }
     }
   });
 
@@ -328,28 +260,6 @@ test.describe("Portfolio", () => {
     }
   });
 
-  test("Experimentsに想定外のカードが存在しない", async ({ page }) => {
-    const heading = page.getByRole("heading", {
-      level: 2,
-      name: "Experiments",
-      exact: true,
-    });
-
-    const section = heading.locator("xpath=ancestor::section");
-
-    await expect(section.locator("article")).toHaveCount(experiments.length);
-
-    for (const experiment of experiments) {
-      await expect(
-        section.getByRole("heading", {
-          level: 3,
-          name: experiment.title,
-          exact: true,
-        }),
-      ).toHaveCount(1);
-    }
-  });
-
   test("Projectsに想定外のカードが存在しない", async ({ page }) => {
     const heading = page.getByRole("heading", {
       level: 2,
@@ -380,31 +290,6 @@ test.describe("Portfolio", () => {
     const heading = page.getByRole("heading", {
       level: 2,
       name: "Projects",
-      exact: true,
-    });
-
-    const section = heading.locator("xpath=ancestor::section");
-
-    const actualLinks = await section
-      .getByRole("link")
-      .evaluateAll((links) =>
-        links
-          .map((link) => link.getAttribute("href"))
-          .filter((href): href is string => href !== null),
-      );
-
-    expect(actualLinks).toHaveLength(expectedLinks.length);
-    expect([...actualLinks].sort()).toEqual([...expectedLinks].sort());
-  });
-
-  test("Experiments内のリンク一覧が仕様と完全一致する", async ({ page }) => {
-    const expectedLinks = experiments.flatMap((experiment) =>
-      experiment.links.map((link) => link.href),
-    );
-
-    const heading = page.getByRole("heading", {
-      level: 2,
-      name: "Experiments",
       exact: true,
     });
 
@@ -572,28 +457,10 @@ test.describe("Portfolio", () => {
     await expect(
       page.getByRole("heading", {
         level: 2,
-        name: "Experiments",
-        exact: true,
-      }),
-    ).toHaveCount(1);
-
-    await expect(
-      page.getByRole("heading", {
-        level: 2,
         name: "Projects",
         exact: true,
       }),
     ).toHaveCount(1);
-
-    for (const experiment of experiments) {
-      await expect(
-        page.getByRole("heading", {
-          level: 3,
-          name: experiment.title,
-          exact: true,
-        }),
-      ).toHaveCount(1);
-    }
 
     for (const project of projects) {
       await expect(

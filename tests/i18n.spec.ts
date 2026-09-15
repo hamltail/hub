@@ -9,9 +9,12 @@ test.describe("English locale", () => {
     await expect(page.locator("html")).toHaveAttribute("lang", "en");
 
     await expect(
-      page.getByText("Projects created to explore and evaluate technologies.", {
-        exact: true,
-      }),
+      page.getByText(
+        "A corporate website designed in Figma and built with Next.js.",
+        {
+          exact: true,
+        },
+      ),
     ).toBeVisible();
 
     await expect(
@@ -25,25 +28,7 @@ test.describe("English locale", () => {
 
     await expect(
       page.getByText(
-        "An authentication project built with Next.js to explore Auth.js and Better Auth.",
-        {
-          exact: true,
-        },
-      ),
-    ).toBeVisible();
-
-    await expect(
-      page.getByText(
         "A small web journal app for keeping a daily record with a one-post-per-day limit.",
-        {
-          exact: true,
-        },
-      ),
-    ).toBeVisible();
-
-    await expect(
-      page.getByText(
-        "A corporate website designed in Figma and built with Next.js.",
         {
           exact: true,
         },
