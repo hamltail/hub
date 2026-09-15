@@ -5,21 +5,6 @@ import Container from "@/components/Container";
 
 const works = [
   {
-    title: "Pawth",
-    descriptionKey: "pawth.description",
-    image: "/images/works/pawth.webp",
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://pawth-lp.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/Pawth",
-      },
-    ],
-  },
-  {
     title: "Animal Corporation",
     descriptionKey: "animalCorporation.description",
     image: "/images/works/animal-corporation.webp",
@@ -35,6 +20,21 @@ const works = [
       {
         label: "GitHub",
         href: "https://github.com/hamltail/corporate-site-demo",
+      },
+    ],
+  },
+  {
+    title: "Pawth",
+    descriptionKey: "pawth.description",
+    image: "/images/works/pawth.webp",
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://pawth-lp.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/Pawth",
       },
     ],
   },
