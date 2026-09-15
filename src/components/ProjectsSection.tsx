@@ -24,6 +24,21 @@ const works = [
     ],
   },
   {
+    title: "Web Lab",
+    descriptionKey: "webLab.description",
+    image: "/images/works/web-lab.webp",
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://next.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/nextjs-sandbox",
+      },
+    ],
+  },
+  {
     title: "Pawth",
     descriptionKey: "pawth.description",
     image: "/images/works/pawth.webp",
