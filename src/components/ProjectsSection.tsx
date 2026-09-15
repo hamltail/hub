@@ -95,7 +95,7 @@ export default function ProjectsSection() {
   return (
     <section className="px-7 pt-12 md:px-11 min-[1200px]:px-0">
       <Container>
-        <h2 className="font-heading text-3xl font-semibold tracking-wide">
+        <h2 className="heading-shadow font-heading text-3xl font-semibold tracking-wide">
           Projects
         </h2>
 

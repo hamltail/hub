@@ -57,6 +57,19 @@
 }
 
 @layer components {
+  .heading-shadow {
+    text-shadow:
+      0 2px 3px rgba(196, 181, 253, 0.28),
+      0 7px 14px rgba(0, 0, 0, 0.14);
+  }
+
+  .dark .heading-shadow {
+    text-shadow:
+      0 0 6px rgba(238, 233, 255, 0.55),
+      0 0 14px rgba(238, 233, 255, 0.35),
+      0 0 28px rgba(238, 233, 255, 0.2);
+  }
+
   .nav-link {
     position: relative;
   }

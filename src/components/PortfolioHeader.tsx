@@ -21,7 +21,7 @@ export default function PortfolioHeader() {
     <section className="px-7 pt-8 md:px-11 md:pt-16 min-[1200px]:px-0">
       <Container>
         <div className="flex items-start justify-between gap-6">
-          <h1 className="font-heading text-6xl font-semibold tracking-[0.08em]">
+          <h1 className="heading-shadow font-heading text-6xl font-semibold tracking-[0.08em]">
             Portfolio
           </h1>
 
