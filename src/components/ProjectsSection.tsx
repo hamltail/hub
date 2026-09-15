@@ -113,6 +113,7 @@ export default function ProjectsSection() {
                   loading={index === 0 ? "eager" : undefined}
                   sizes="(min-width: 1200px) 544px, (min-width: 768px) calc((100vw - 112px) / 2), calc(100vw - 56px)"
                   className="object-cover"
+                  draggable={false}
                 />
               </div>
 
