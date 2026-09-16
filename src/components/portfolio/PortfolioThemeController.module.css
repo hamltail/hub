@@ -1,0 +1,28 @@
+.transitionOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  pointer-events: none;
+  opacity: 0;
+
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 122, 0, 0.8), transparent 35%),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(126, 34, 206, 0.9),
+      transparent 45%
+    ),
+    radial-gradient(circle at center, rgb(59, 7, 100), rgb(0, 0, 0) 75%);
+
+  transform: scale(1.08);
+
+  transition:
+    opacity 500ms ease,
+    transform 500ms ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: scale(1);
+}
