@@ -12,8 +12,10 @@ export default function ThemePumpkin({ onClick }: ThemePumpkinProps) {
       aria-label="Switch portfolio theme"
       className={styles.pumpkin}
     >
-      <span aria-hidden="true" className={styles.icon}>
-        🎃
+      <span className={styles.hoverEffect}>
+        <span aria-hidden="true" className={styles.icon}>
+          🎃
+        </span>
       </span>
     </button>
   );
