@@ -31,6 +31,7 @@
 @theme inline {
   --font-sans: var(--font-noto-sans-jp);
   --font-heading: var(--font-barlow-condensed);
+  --font-halloween: var(--font-creepster);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -22,22 +22,10 @@ const floatStyles = [
 ] as const;
 
 const decorations = [
-  {
-    character: "✦",
-    className: "left-[8%] top-[6%] text-3xl",
-  },
-  {
-    character: "🍬",
-    className: "right-[10%] top-[12%] rotate-12 text-4xl",
-  },
-  {
-    character: "🕸️",
-    className: "left-[3%] top-[38%] -rotate-12 text-6xl",
-  },
-  {
-    character: "⭐",
-    className: "right-[6%] top-[46%] text-3xl",
-  },
+  { character: "✦", className: "left-[8%] top-[6%] text-3xl" },
+  { character: "🍬", className: "right-[10%] top-[12%] rotate-12 text-4xl" },
+  { character: "🕸️", className: "left-[3%] top-[38%] -rotate-12 text-6xl" },
+  { character: "⭐", className: "right-[6%] top-[46%] text-3xl" },
   {
     character: "🍭",
     className: "bottom-[24%] left-[12%] -rotate-12 text-5xl",
@@ -46,10 +34,7 @@ const decorations = [
     character: "🦇",
     className: "bottom-[16%] right-[10%] rotate-12 text-4xl",
   },
-  {
-    character: "✦",
-    className: "bottom-[5%] left-[44%] text-4xl",
-  },
+  { character: "✦", className: "bottom-[5%] left-[44%] text-4xl" },
 ] as const;
 
 export default function ProjectsSection() {
@@ -77,7 +62,7 @@ export default function ProjectsSection() {
             Welcome to the party
           </p>
 
-          <h2 className="font-heading mt-3 text-5xl font-semibold tracking-wide md:text-7xl">
+          <h2 className="font-halloween mt-3 text-5xl tracking-wide md:text-7xl">
             Projects
             <span aria-hidden="true" className="ml-4 inline-block rotate-12">
               🎃
@@ -108,7 +93,7 @@ export default function ProjectsSection() {
                         Project {String(index + 1).padStart(2, "0")}
                       </p>
 
-                      <h3 className="font-heading mt-2 text-3xl font-semibold tracking-wide md:text-4xl">
+                      <h3 className="font-halloween mt-2 text-3xl tracking-wide md:text-4xl">
                         {project.title}
                       </h3>
 

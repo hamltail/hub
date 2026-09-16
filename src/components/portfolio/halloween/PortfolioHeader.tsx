@@ -2,18 +2,9 @@ import Container from "@/components/Container";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 const externalLinks = [
-  {
-    label: "GitHub",
-    href: "https://github.com/hamltail",
-  },
-  {
-    label: "note",
-    href: "https://note.com/hamltail",
-  },
-  {
-    label: "Zenn",
-    href: "https://zenn.dev/hamltail",
-  },
+  { label: "GitHub", href: "https://github.com/hamltail" },
+  { label: "note", href: "https://note.com/hamltail" },
+  { label: "Zenn", href: "https://zenn.dev/hamltail" },
 ];
 
 export default function PortfolioHeader() {
@@ -21,7 +12,7 @@ export default function PortfolioHeader() {
     <section className="px-7 pt-8 md:px-11 md:pt-16 min-[1200px]:px-0">
       <Container>
         <div className="flex items-start justify-between gap-6">
-          <h1 className="heading-shadow font-heading text-6xl font-semibold tracking-[0.08em]">
+          <h1 className="heading-shadow font-halloween text-6xl tracking-[0.08em]">
             Portfolio
           </h1>
 
