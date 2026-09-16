@@ -1,0 +1,68 @@
+.pumpkin {
+  position: absolute;
+  top: 6rem;
+  right: max(1.5rem, calc((100% - 70rem) / 2));
+  z-index: 50;
+
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  animation: pumpkin-arrive 1.8s ease-out forwards;
+}
+
+.hoverEffect {
+  display: block;
+  transform-origin: center bottom;
+  transition: transform 250ms ease;
+}
+
+.pumpkin:hover .hoverEffect {
+  transform: rotate(12deg) scale(1.618);
+}
+
+.icon {
+  display: block;
+  font-size: 1.618rem;
+  line-height: 1;
+  user-select: none;
+
+  filter: drop-shadow(0 0 3px rgba(255, 230, 120, 0.65))
+    drop-shadow(0 0 8px rgba(255, 210, 70, 0.3));
+
+  animation: pumpkin-roll 1.8s ease-out forwards;
+}
+
+@keyframes pumpkin-arrive {
+  0% {
+    transform: translate(80px, -180px);
+  }
+
+  55% {
+    transform: translate(-180px, 50px);
+  }
+
+  100% {
+    transform: translate(-4px, 110px);
+  }
+}
+
+@keyframes pumpkin-roll {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  55% {
+    transform: rotate(-360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pumpkin:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
