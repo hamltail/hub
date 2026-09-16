@@ -2,10 +2,8 @@
   position: fixed;
   inset: 0;
   z-index: 100;
-
   pointer-events: none;
   opacity: 0;
-
   background: #000;
 }
 
@@ -16,14 +14,12 @@
 
 .revealing {
   opacity: 1;
-
   mask-image: radial-gradient(
     circle at center,
     transparent 0,
     transparent var(--reveal-radius),
     black calc(var(--reveal-radius) + 1px)
   );
-
   animation: reveal-from-center 700ms ease-in-out forwards;
 }
 

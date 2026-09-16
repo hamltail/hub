@@ -1,14 +1,12 @@
 .pumpkin {
   position: absolute;
   top: 6rem;
-  right: 1.5rem;
+  right: max(1.5rem, calc((100% - 70rem) / 2));
   z-index: 50;
-
   padding: 0;
   border: 0;
   background: transparent;
   cursor: pointer;
-
   animation: pumpkin-arrive 1.8s ease-out forwards;
 }
 
@@ -17,7 +15,9 @@
   font-size: 1.618rem;
   line-height: 1;
   user-select: none;
-
+  filter:
+    drop-shadow(0 0 3px rgba(255, 230, 120, 0.65))
+    drop-shadow(0 0 8px rgba(255, 210, 70, 0.3));
   animation: pumpkin-roll 1.8s ease-out forwards;
 }
 
@@ -27,11 +27,11 @@
   }
 
   55% {
-    transform: translate(-100px, 50px);
+    transform: translate(-180px, 50px);
   }
 
   100% {
-    transform: translate(-220px, 50px);
+    transform: translate(-4px, 110px);
   }
 }
 
@@ -45,7 +45,7 @@
   }
 
   100% {
-    transform: rotate(-720deg);
+    transform: rotate(0deg);
   }
 }
 
