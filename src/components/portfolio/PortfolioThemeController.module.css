@@ -4,7 +4,21 @@
   z-index: 100;
   pointer-events: none;
   opacity: 0;
-  background: #000;
+
+  background:
+    radial-gradient(
+      circle at 40% 42%,
+      rgba(255, 190, 100, 0.5) 0%,
+      rgba(255, 122, 0, 0.25) 18%,
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 62% 58%,
+      rgba(210, 170, 255, 0.55) 0%,
+      rgba(168, 85, 247, 0.3) 20%,
+      transparent 40%
+    ),
+    #000;
 }
 
 .covering {

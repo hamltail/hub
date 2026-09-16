@@ -15,8 +15,7 @@
   font-size: 1.618rem;
   line-height: 1;
   user-select: none;
-  filter:
-    drop-shadow(0 0 3px rgba(255, 230, 120, 0.65))
+  filter: drop-shadow(0 0 3px rgba(255, 230, 120, 0.65))
     drop-shadow(0 0 8px rgba(255, 210, 70, 0.3));
   animation: pumpkin-roll 1.8s ease-out forwards;
 }
