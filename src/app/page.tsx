@@ -1,5 +1,5 @@
-import PortfolioDefault from "@/components/portfolio/default/PortfolioDefault";
+import PortfolioHalloween from "@/components/portfolio/halloween/PortfolioHalloween";
 
 export default function Home() {
-  return <PortfolioDefault />;
+  return <PortfolioHalloween />;
 }
