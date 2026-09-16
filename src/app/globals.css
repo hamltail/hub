@@ -32,6 +32,9 @@
   --font-sans: var(--font-noto-sans-jp);
   --font-heading: var(--font-barlow-condensed);
 
+  --font-halloween: var(--font-creepster);
+  --font-halloween-jp: var(--font-reggae-one);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
