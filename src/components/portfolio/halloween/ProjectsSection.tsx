@@ -3,6 +3,8 @@ import { useTranslations } from "next-intl";
 import Container from "@/components/Container";
 import { projects } from "@/data/projects";
 
+import styles from "./ProjectsSection.module.css";
+
 const characters = ["🎃", "👻", "🦇", "💀", "🎃"] as const;
 
 const projectStyles = [
@@ -14,42 +16,134 @@ const projectStyles = [
 ] as const;
 
 const floatStyles = [
-  "animate-[halloween-float_8s_ease-in-out_infinite]",
-  "animate-[halloween-float_11s_ease-in-out_-3s_infinite]",
-  "animate-[halloween-float_9s_ease-in-out_-6s_infinite]",
-  "animate-[halloween-float_13s_ease-in-out_-4s_infinite]",
-  "animate-[halloween-float_10s_ease-in-out_-7s_infinite]",
+  styles.floatA,
+  styles.floatB,
+  styles.floatC,
+  styles.floatD,
+  styles.floatE,
 ] as const;
 
 const decorations = [
-  { character: "✦", className: "left-[8%] top-[6%] text-3xl" },
-  { character: "🍬", className: "right-[10%] top-[12%] rotate-12 text-4xl" },
-  { character: "🕸️", className: "left-[3%] top-[38%] -rotate-12 text-6xl" },
-  { character: "⭐", className: "right-[6%] top-[46%] text-3xl" },
+  {
+    character: "⭐",
+    className: "left-[6%] top-[4%] text-3xl",
+    animation: styles.driftA,
+  },
+  {
+    character: "🍬",
+    className: "right-[9%] top-[8%] text-4xl",
+    animation: styles.driftB,
+  },
   {
     character: "🍭",
-    className: "bottom-[24%] left-[12%] -rotate-12 text-5xl",
+    className: "left-[24%] top-[14%] text-4xl",
+    animation: styles.driftC,
+  },
+  {
+    character: "⭐",
+    className: "right-[29%] top-[19%] text-2xl",
+    animation: styles.twinkleA,
+  },
+  {
+    character: "🍫",
+    className: "left-[4%] top-[24%] text-4xl",
+    animation: styles.driftB,
   },
   {
     character: "🦇",
-    className: "bottom-[16%] right-[10%] rotate-12 text-4xl",
+    className: "right-[4%] top-[27%] text-5xl",
+    animation: styles.flyA,
   },
-  { character: "✦", className: "bottom-[5%] left-[44%] text-4xl" },
+  {
+    character: "🍪",
+    className: "left-[16%] top-[34%] text-3xl",
+    animation: styles.driftC,
+  },
+  {
+    character: "🕸️",
+    className: "right-[14%] top-[36%] text-6xl",
+    animation: styles.sway,
+  },
+  {
+    character: "⭐",
+    className: "left-[42%] top-[39%] text-2xl",
+    animation: styles.twinkleB,
+  },
+  {
+    character: "🍬",
+    className: "right-[3%] top-[45%] text-3xl",
+    animation: styles.driftA,
+  },
+  {
+    character: "🍩",
+    className: "left-[7%] top-[48%] text-4xl",
+    animation: styles.driftB,
+  },
+  {
+    character: "⭐",
+    className: "right-[25%] top-[53%] text-3xl",
+    animation: styles.twinkleC,
+  },
+  {
+    character: "🍭",
+    className: "left-[27%] top-[57%] text-5xl",
+    animation: styles.driftC,
+  },
+  {
+    character: "👻",
+    className: "right-[6%] top-[62%] text-5xl",
+    animation: styles.ghost,
+  },
+  {
+    character: "🍬",
+    className: "left-[4%] top-[67%] text-4xl",
+    animation: styles.driftA,
+  },
+  {
+    character: "⭐",
+    className: "left-[48%] top-[70%] text-2xl",
+    animation: styles.twinkleA,
+  },
+  {
+    character: "🦇",
+    className: "right-[17%] top-[74%] text-4xl",
+    animation: styles.flyB,
+  },
+  {
+    character: "🍫",
+    className: "left-[12%] top-[80%] text-4xl",
+    animation: styles.driftB,
+  },
+  {
+    character: "🍪",
+    className: "right-[7%] top-[86%] text-4xl",
+    animation: styles.driftC,
+  },
+  {
+    character: "⭐",
+    className: "left-[35%] top-[90%] text-3xl",
+    animation: styles.twinkleB,
+  },
+  {
+    character: "🍭",
+    className: "right-[31%] top-[94%] text-4xl",
+    animation: styles.driftA,
+  },
 ] as const;
 
 export default function ProjectsSection() {
   const t = useTranslations("Projects");
 
   return (
-    <section className="relative px-7 py-24 md:px-11 md:py-36 min-[1200px]:px-0">
+    <section className="relative overflow-hidden px-7 py-24 md:px-11 md:py-36 min-[1200px]:px-0">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-80"
+        className="pointer-events-none absolute inset-0 opacity-90"
       >
         {decorations.map((decoration, index) => (
           <span
             key={`${decoration.character}-${index}`}
-            className={`absolute select-none ${decoration.className}`}
+            className={`absolute select-none ${decoration.className} ${decoration.animation}`}
           >
             {decoration.character}
           </span>
