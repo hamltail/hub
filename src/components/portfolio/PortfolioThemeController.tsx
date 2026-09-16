@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import PortfolioDefault from "@/components/portfolio/default/PortfolioDefault";
 import PortfolioHalloween from "@/components/portfolio/halloween/PortfolioHalloween";
+import ThemePumpkin from "@/components/portfolio/ThemePumpkin";
 
 type PortfolioTheme = "default" | "halloween";
 
@@ -17,16 +18,10 @@ export default function PortfolioThemeController() {
   };
 
   return (
-    <>
+    <div className="relative overflow-x-clip">
       {theme === "default" ? <PortfolioDefault /> : <PortfolioHalloween />}
 
-      <button
-        type="button"
-        onClick={toggleTheme}
-        className="fixed right-6 bottom-6 z-50 rounded-full border border-border bg-surface px-4 py-3 text-foreground shadow-lg"
-      >
-        🎃 Theme
-      </button>
-    </>
+      <ThemePumpkin onClick={toggleTheme} />
+    </div>
   );
 }
