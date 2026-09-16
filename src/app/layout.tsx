@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, Creepster, Noto_Sans_JP } from "next/font/google";
+import {
+  Barlow_Condensed,
+  Creepster,
+  Noto_Sans_JP,
+  Reggae_One,
+} from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 
@@ -22,6 +27,12 @@ const creepster = Creepster({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-creepster",
+});
+
+const reggaeOne = Reggae_One({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-reggae-one",
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -64,7 +75,7 @@ export default async function RootLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${notoSansJP.variable} ${barlowCondensed.variable} ${creepster.variable}`}
+      className={`${notoSansJP.variable} ${barlowCondensed.variable} ${creepster.variable} ${reggaeOne.variable}`}
     >
       <body className="bg-background text-foreground">
         <NextIntlClientProvider messages={messages}>

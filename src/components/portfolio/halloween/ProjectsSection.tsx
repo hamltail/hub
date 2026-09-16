@@ -97,7 +97,7 @@ export default function ProjectsSection() {
                         {project.title}
                       </h3>
 
-                      <p className="mx-auto mt-4 max-w-sm text-sm leading-7 opacity-75">
+                      <p className="font-halloween-jp mx-auto mt-4 max-w-sm text-sm leading-7 opacity-75">
                         {t(project.descriptionKey)}
                       </p>
 
