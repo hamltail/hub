@@ -1,20 +1,16 @@
 export const projects = [
   {
-    title: "Animal Corporation",
-    descriptionKey: "animalCorporation.description",
-    image: "/images/works/animal-corporation.webp",
+    title: "Pawth",
+    descriptionKey: "pawth.description",
+    image: "/images/works/pawth.webp",
     links: [
       {
         label: "Webサイト",
-        href: "https://animal.hamltail.dev",
-      },
-      {
-        label: "Figma",
-        href: "https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/Public?node-id=2003-267&p=f",
+        href: "https://pawth-lp.hamltail.dev",
       },
       {
         label: "GitHub",
-        href: "https://github.com/hamltail/corporate-site-demo",
+        href: "https://github.com/hamltail/Pawth",
       },
     ],
   },
@@ -34,17 +30,21 @@ export const projects = [
     ],
   },
   {
-    title: "Pawth",
-    descriptionKey: "pawth.description",
-    image: "/images/works/pawth.webp",
+    title: "Animal Corporation",
+    descriptionKey: "animalCorporation.description",
+    image: "/images/works/animal-corporation.webp",
     links: [
       {
         label: "Webサイト",
-        href: "https://pawth-lp.hamltail.dev",
+        href: "https://animal.hamltail.dev",
+      },
+      {
+        label: "Figma",
+        href: "https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/Public?node-id=2003-267&p=f",
       },
       {
         label: "GitHub",
-        href: "https://github.com/hamltail/Pawth",
+        href: "https://github.com/hamltail/corporate-site-demo",
       },
     ],
   },
