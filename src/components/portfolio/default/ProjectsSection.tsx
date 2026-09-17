@@ -18,7 +18,7 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <article
               key={project.title}
-              className="border-border flex min-h-96 flex-col rounded-lg border p-4 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
+              className="project-card border-border flex min-h-96 flex-col rounded-lg border p-4 transition duration-300 ease-out hover:-translate-y-1"
             >
               <div className="relative aspect-video w-full overflow-hidden rounded-md">
                 <Image
