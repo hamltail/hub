@@ -15,21 +15,6 @@ export const projects = [
     ],
   },
   {
-    title: "Web Lab",
-    descriptionKey: "webLab.description",
-    image: "/images/works/web-lab.webp",
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://next.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/nextjs-sandbox",
-      },
-    ],
-  },
-  {
     title: "Animal Corporation",
     descriptionKey: "animalCorporation.description",
     image: "/images/works/animal-corporation.webp",
@@ -44,7 +29,22 @@ export const projects = [
       },
       {
         label: "GitHub",
-        href: "https://github.com/hamltail/corporate-site-demo",
+        href: "https://github.com/hamltail/animal-corporation",
+      },
+    ],
+  },
+  {
+    title: "Web Lab",
+    descriptionKey: "webLab.description",
+    image: "/images/works/web-lab.webp",
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://next.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/nextjs-sandbox",
       },
     ],
   },

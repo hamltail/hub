@@ -36,28 +36,32 @@ const reggaeOne = Reggae_One({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("Metadata");
+  const metadata = await getTranslations("Metadata");
+  const portfolio = await getTranslations("Portfolio");
+
+  const title = `${portfolio("title")} | ${portfolio("name")}`;
+  const description = metadata("description");
 
   return {
     metadataBase: new URL("https://hub.hamltail.dev"),
-    title: "Portfolio | h-waji / hamltail",
-    description: t("description"),
+    title,
+    description,
     openGraph: {
-      title: "Portfolio | h-waji / hamltail",
-      description: t("description"),
+      title,
+      description,
       images: [
         {
           url: "/images/og-image.png",
           width: 1200,
           height: 630,
-          alt: "Portfolio | h-waji / hamltail",
+          alt: title,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Portfolio | h-waji / hamltail",
-      description: t("description"),
+      title,
+      description,
       images: ["/images/og-image.png"],
     },
   };

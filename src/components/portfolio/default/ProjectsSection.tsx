@@ -25,7 +25,7 @@ export default function ProjectsSection() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  loading={index === 0 ? "eager" : undefined}
+                  loading={index < 2 ? "eager" : undefined}
                   sizes="(min-width: 1200px) 544px, (min-width: 768px) calc((100vw - 112px) / 2), calc(100vw - 56px)"
                   className="object-cover"
                   draggable={false}

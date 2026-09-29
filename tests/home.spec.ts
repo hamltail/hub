@@ -29,6 +29,21 @@ const headerLinks: LinkExpectation[] = [
 
 const projects: ProjectExpectation[] = [
   {
+    title: "Pawth",
+    description: "1日1投稿の制約で、日々の記録を続ける小さなWeb日記アプリ",
+    image: "/images/works/pawth.webp",
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://pawth-lp.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/Pawth",
+      },
+    ],
+  },
+  {
     title: "Animal Corporation",
     description: "Figmaでデザインし、Next.jsで実装したコーポレートサイト",
     image: "/images/works/animal-corporation.webp",
@@ -43,7 +58,7 @@ const projects: ProjectExpectation[] = [
       },
       {
         label: "GitHub",
-        href: "https://github.com/hamltail/corporate-site-demo",
+        href: "https://github.com/hamltail/animal-corporation",
       },
     ],
   },
@@ -60,21 +75,6 @@ const projects: ProjectExpectation[] = [
       {
         label: "GitHub",
         href: "https://github.com/hamltail/nextjs-sandbox",
-      },
-    ],
-  },
-  {
-    title: "Pawth",
-    description: "1日1投稿の制約で、日々の記録を続ける小さなWeb日記アプリ",
-    image: "/images/works/pawth.webp",
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://pawth-lp.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/Pawth",
       },
     ],
   },
@@ -188,7 +188,15 @@ test.describe("Portfolio", () => {
     ).toBeVisible();
 
     await expect(
-      page.getByText("h-waji / hamltail", {
+      page
+        .getByText("h-waji / hamltail", {
+          exact: true,
+        })
+        .first(),
+    ).toBeVisible();
+
+    await expect(
+      page.getByText("Web Engineer / UI・UX / Interaction", {
         exact: true,
       }),
     ).toBeVisible();
@@ -213,6 +221,20 @@ test.describe("Portfolio", () => {
     for (const link of headerLinks) {
       await expectExternalLink(externalLinks, link);
     }
+  });
+
+  test("Projectsが想定した順番で表示される", async ({ page }) => {
+    const heading = page.getByRole("heading", {
+      level: 2,
+      name: "Projects",
+      exact: true,
+    });
+
+    const section = heading.locator("xpath=ancestor::section");
+
+    await expect(section.locator("article h3")).toHaveText(
+      projects.map((project) => project.title),
+    );
   });
 
   test("Projectsのタイトル・説明文・リンク構成が完全に一致する", async ({

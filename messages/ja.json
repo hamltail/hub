@@ -2,6 +2,11 @@
   "Metadata": {
     "description": "Web制作・UI設計・個人開発の制作物を掲載したポートフォリオサイト。"
   },
+  "Portfolio": {
+    "title": "Portfolio",
+    "name": "h-waji / hamltail",
+    "tagline": "Web Engineer / UI・UX / Interaction"
+  },
   "Projects": {
     "animalCorporation": {
       "description": "Figmaでデザインし、Next.jsで実装したコーポレートサイト"
