@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import Container from "@/components/Container";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 
@@ -17,12 +19,14 @@ const externalLinks = [
 ];
 
 export default function PortfolioHeader() {
+  const t = useTranslations("Portfolio");
+
   return (
     <section className="px-7 pt-8 md:px-11 md:pt-16 min-[1200px]:px-0">
       <Container>
         <div className="flex items-start justify-between gap-6">
           <h1 className="heading-shadow font-heading text-6xl font-semibold tracking-[0.08em]">
-            Portfolio
+            {t("title")}
           </h1>
 
           <ThemeSwitcher />
@@ -30,7 +34,11 @@ export default function PortfolioHeader() {
 
         <div className="mt-14">
           <p className="font-heading text-xl font-semibold tracking-wide">
-            h-waji / hamltail
+            {t("name")}
+          </p>
+
+          <p className="mt-2 font-heading text-sm font-semibold tracking-[0.12em] text-foreground/70">
+            {t("tagline")}
           </p>
 
           <div

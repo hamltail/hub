@@ -2,6 +2,11 @@
   "Metadata": {
     "description": "A portfolio showcasing web development, UI design, and personal projects."
   },
+  "Portfolio": {
+    "title": "Portfolio",
+    "name": "h-waji / hamltail",
+    "tagline": "Web Engineer / UI・UX / Interaction"
+  },
   "Projects": {
     "animalCorporation": {
       "description": "A corporate website designed in Figma and built with Next.js."
