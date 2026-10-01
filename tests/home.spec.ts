@@ -63,22 +63,6 @@ const projects: ProjectExpectation[] = [
     ],
   },
   {
-    title: "Web Lab",
-    description:
-      "Next.jsをベースに、Web開発・UI/UXデザイン・品質改善などを、実際に作りながら検証するプロジェクト",
-    image: "/images/works/web-lab.webp",
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://next.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/nextjs-sandbox",
-      },
-    ],
-  },
-  {
     title: "Interaction Lab",
     description: "Webならではの表現とインタラクションを探求する実験サイト",
     image: "/images/works/interaction-lab.webp",
@@ -94,6 +78,21 @@ const projects: ProjectExpectation[] = [
       {
         label: "GitHub",
         href: "https://github.com/hamltail/interaction-lab",
+      },
+    ],
+  },
+  {
+    title: "Web Lab",
+    description: "Web開発・UI/UX・品質改善などを、作りながら試すプロジェクト",
+    image: "/images/works/web-lab.webp",
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://next.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/nextjs-sandbox",
       },
     ],
   },
