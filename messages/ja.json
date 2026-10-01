@@ -12,7 +12,7 @@
       "description": "Figmaでデザインし、Next.jsで実装したコーポレートサイト"
     },
     "webLab": {
-      "description": "Next.jsをベースに、Web開発・UI/UXデザイン・品質改善などを、実際に作りながら検証するプロジェクト"
+      "description": "Web開発・UI/UX・品質改善などを、作りながら試すプロジェクト"
     },
     "pawth": {
       "description": "1日1投稿の制約で、日々の記録を続ける小さなWeb日記アプリ"

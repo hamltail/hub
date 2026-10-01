@@ -34,21 +34,6 @@ export const projects = [
     ],
   },
   {
-    title: "Web Lab",
-    descriptionKey: "webLab.description",
-    image: "/images/works/web-lab.webp",
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://next.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/nextjs-sandbox",
-      },
-    ],
-  },
-  {
     title: "Interaction Lab",
     descriptionKey: "interactionLab.description",
     image: "/images/works/interaction-lab.webp",
@@ -64,6 +49,21 @@ export const projects = [
       {
         label: "GitHub",
         href: "https://github.com/hamltail/interaction-lab",
+      },
+    ],
+  },
+  {
+    title: "Web Lab",
+    descriptionKey: "webLab.description",
+    image: "/images/works/web-lab.webp",
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://next.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/nextjs-sandbox",
       },
     ],
   },

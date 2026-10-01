@@ -19,7 +19,7 @@ test.describe("English locale", () => {
 
     await expect(
       page.getByText(
-        "A project for exploring web development, UI/UX design, and quality improvements with Next.js through hands-on development.",
+        "A project for exploring web development, UI/UX, and quality improvements through hands-on work.",
         {
           exact: true,
         },
