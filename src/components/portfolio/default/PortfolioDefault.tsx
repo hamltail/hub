@@ -1,5 +1,5 @@
 import BackToTop from "@/components/BackToTop";
-import PortfolioFooter from "@/components/portfolio/default/PortfolioFooter";
+import PortfolioFooter from "@/components/portfolio/PortfolioFooter";
 import PortfolioHeader from "@/components/portfolio/default/PortfolioHeader";
 import ProjectsSection from "@/components/portfolio/default/ProjectsSection";
 
