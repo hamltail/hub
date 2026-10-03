@@ -54,6 +54,12 @@ test.describe("English locale", () => {
     ).toBeVisible();
 
     await expect(
+      page.getByRole("navigation", {
+        name: "External links",
+      }),
+    ).toBeVisible();
+
+    await expect(
       page.getByRole("button", {
         name: "Light theme",
       }),
@@ -68,6 +74,18 @@ test.describe("English locale", () => {
     await expect(
       page.getByRole("button", {
         name: "System theme",
+      }),
+    ).toBeVisible();
+
+    await expect(
+      page.getByRole("button", {
+        name: "Switch portfolio theme",
+      }),
+    ).toBeVisible();
+
+    await expect(
+      page.getByRole("group", {
+        name: "Language selection",
       }),
     ).toBeVisible();
 

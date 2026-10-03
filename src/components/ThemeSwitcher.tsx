@@ -81,10 +81,12 @@ export default function ThemeSwitcher() {
     () => false,
   );
 
+  const isReady = mounted && theme !== undefined;
+
   return (
     <div className="border-border bg-surface flex shrink-0 gap-1 rounded-full border p-1">
       {themes.map((item) => {
-        const isActive = mounted && theme === item.value;
+        const isActive = isReady && theme === item.value;
         const label = t(item.labelKey);
 
         return (
@@ -99,7 +101,7 @@ export default function ThemeSwitcher() {
             aria-label={label}
             aria-pressed={isActive}
             title={label}
-            disabled={!mounted}
+            disabled={!isReady}
             onClick={() => setTheme(item.value)}
           >
             <span className="size-4">{item.icon}</span>

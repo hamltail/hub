@@ -5,7 +5,8 @@
   "Portfolio": {
     "title": "Portfolio",
     "name": "h-waji / hamltail",
-    "tagline": "Web Engineer / UI・UX / Interaction"
+    "tagline": "Web Engineer / UI・UX / Interaction",
+    "externalLinks": "外部リンク"
   },
   "Projects": {
     "animalCorporation": {
@@ -25,10 +26,16 @@
     },
     "webSite": "Webサイト"
   },
+  "LanguageSwitcher": {
+    "label": "言語切り替え"
+  },
   "ThemeSwitcher": {
     "light": "ライト",
     "dark": "ダーク",
     "system": "システム"
+  },
+  "PortfolioTheme": {
+    "switchTheme": "ポートフォリオのテーマを切り替え"
   },
   "BackToTop": {
     "label": "ページ上部へ戻る"

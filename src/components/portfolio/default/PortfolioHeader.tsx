@@ -41,9 +41,9 @@ export default function PortfolioHeader() {
             {t("tagline")}
           </p>
 
-          <div
+          <nav
             className="mt-3 flex items-center gap-4"
-            aria-label="External links"
+            aria-label={t("externalLinks")}
           >
             {externalLinks.map((link) => (
               <a
@@ -56,7 +56,7 @@ export default function PortfolioHeader() {
                 {link.label}
               </a>
             ))}
-          </div>
+          </nav>
         </div>
       </Container>
     </section>

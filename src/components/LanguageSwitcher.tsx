@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 
@@ -23,6 +23,7 @@ const languages: {
 const COOKIE_EXPIRATION = 2147483647000;
 
 export default function LanguageSwitcher() {
+  const t = useTranslations("LanguageSwitcher");
   const locale = useLocale();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -47,8 +48,9 @@ export default function LanguageSwitcher() {
 
   return (
     <div
+      role="group"
+      aria-label={t("label")}
       className="flex items-center gap-2 text-sm"
-      aria-label="Language selection"
     >
       {languages.map((language, index) => {
         const isActive = locale === language.locale;
