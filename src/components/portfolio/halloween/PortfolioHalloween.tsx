@@ -1,5 +1,5 @@
 import BackToTop from "@/components/BackToTop";
-import PortfolioFooter from "@/components/portfolio/halloween/PortfolioFooter";
+import PortfolioFooter from "@/components/portfolio/PortfolioFooter";
 import PortfolioHeader from "@/components/portfolio/halloween/PortfolioHeader";
 import ProjectsSection from "@/components/portfolio/halloween/ProjectsSection";
 

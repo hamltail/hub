@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import styles from "./ThemePumpkin.module.css";
 
 type ThemePumpkinProps = {
@@ -5,11 +7,13 @@ type ThemePumpkinProps = {
 };
 
 export default function ThemePumpkin({ onClick }: ThemePumpkinProps) {
+  const t = useTranslations("PortfolioTheme");
+
   return (
     <button
       type="button"
       onClick={onClick}
-      aria-label="Switch portfolio theme"
+      aria-label={t("switchTheme")}
       className={styles.pumpkin}
     >
       <span className={styles.hoverEffect}>

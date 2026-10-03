@@ -210,7 +210,9 @@ test.describe("Portfolio", () => {
   });
 
   test("HeaderのGitHub・note・Zennが正しいリンク先を持つ", async ({ page }) => {
-    const externalLinks = page.locator('[aria-label="External links"]');
+    const externalLinks = page.getByRole("navigation", {
+      name: "外部リンク",
+    });
 
     await expect(externalLinks).toBeVisible();
     await expect(externalLinks.getByRole("link")).toHaveCount(
