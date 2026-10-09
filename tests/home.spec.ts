@@ -29,21 +29,6 @@ const headerLinks: LinkExpectation[] = [
 
 const projects: ProjectExpectation[] = [
   {
-    title: "Pawth",
-    description: "1日1投稿の制約で、日々の記録を続ける小さなWeb日記アプリ",
-    image: "/images/works/pawth.webp",
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://pawth-lp.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/Pawth",
-      },
-    ],
-  },
-  {
     title: "Animal Corporation",
     description: "デザインから実装まで一貫して手がけたコーポレートサイト",
     image: "/images/works/animal-corporation.webp",
@@ -59,6 +44,21 @@ const projects: ProjectExpectation[] = [
       {
         label: "GitHub",
         href: "https://github.com/hamltail/animal-corporation",
+      },
+    ],
+  },
+  {
+    title: "Pawth",
+    description: "1日1投稿の制約で、日々の記録を続ける小さなWeb日記アプリ",
+    image: "/images/works/pawth.webp",
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://pawth-lp.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/Pawth",
       },
     ],
   },
@@ -392,7 +392,7 @@ test.describe("Portfolio", () => {
 
     await expect(systemButton).toHaveAttribute("aria-pressed", "true");
     await expect(lightButton).toHaveAttribute("aria-pressed", "false");
-    await expect(darkButton).toHaveAttribute("aria-pressed", "false");
+    await expect(systemButton).toHaveAttribute("aria-pressed", "true");
 
     await expect
       .poll(() => page.evaluate(() => localStorage.getItem("theme")))

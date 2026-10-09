@@ -1,20 +1,5 @@
 export const projects = [
   {
-    title: "Pawth",
-    descriptionKey: "pawth.description",
-    image: "/images/works/pawth.webp",
-    links: [
-      {
-        label: "Webサイト",
-        href: "https://pawth-lp.hamltail.dev",
-      },
-      {
-        label: "GitHub",
-        href: "https://github.com/hamltail/Pawth",
-      },
-    ],
-  },
-  {
     title: "Animal Corporation",
     descriptionKey: "animalCorporation.description",
     image: "/images/works/animal-corporation.webp",
@@ -30,6 +15,21 @@ export const projects = [
       {
         label: "GitHub",
         href: "https://github.com/hamltail/animal-corporation",
+      },
+    ],
+  },
+  {
+    title: "Pawth",
+    descriptionKey: "pawth.description",
+    image: "/images/works/pawth.webp",
+    links: [
+      {
+        label: "Webサイト",
+        href: "https://pawth-lp.hamltail.dev",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/hamltail/Pawth",
       },
     ],
   },
