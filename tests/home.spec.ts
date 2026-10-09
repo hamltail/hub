@@ -49,7 +49,7 @@ const projects: ProjectExpectation[] = [
   },
   {
     title: "Pawth",
-    description: "1日1投稿の制約で、日々の記録を続ける小さなWeb日記アプリ",
+    description: "日々の足あとを描く、小さなWeb日記アプリ",
     image: "/images/works/pawth.webp",
     links: [
       {

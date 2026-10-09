@@ -34,7 +34,7 @@ test.describe("English locale", () => {
 
     await expect(
       page.getByText(
-        "A small web journal app for keeping a daily record with a one-post-per-day limit.",
+        "A small web journaling app for capturing everyday moments.",
         {
           exact: true,
         },
