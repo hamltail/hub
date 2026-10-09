@@ -5,12 +5,12 @@
   "Portfolio": {
     "title": "Portfolio",
     "name": "h-waji / hamltail",
-    "tagline": "Web Engineer / UI・UX / Interaction",
+    "tagline": "UI / Interaction / Development",
     "externalLinks": "External links"
   },
   "Projects": {
     "animalCorporation": {
-      "description": "A corporate website designed in Figma and built with Next.js."
+      "description": "A corporate website handled end-to-end, from design to implementation."
     },
     "webLab": {
       "description": "A project for exploring web development, UI/UX, and quality improvements through hands-on work."
@@ -22,7 +22,7 @@
       "description": "An experimental website exploring interactions and expressions unique to the web."
     },
     "portfolioSite": {
-      "description": "A portfolio website designed in Figma and built with Next.js."
+      "description": "A portfolio website crafted with a focus on UI design and interaction."
     },
     "webSite": "Website"
   },

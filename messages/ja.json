@@ -5,12 +5,12 @@
   "Portfolio": {
     "title": "Portfolio",
     "name": "h-waji / hamltail",
-    "tagline": "Web Engineer / UI・UX / Interaction",
+    "tagline": "UI / Interaction / Development",
     "externalLinks": "外部リンク"
   },
   "Projects": {
     "animalCorporation": {
-      "description": "Figmaでデザインし、Next.jsで実装したコーポレートサイト"
+      "description": "デザインから実装まで一貫して手がけたコーポレートサイト"
     },
     "webLab": {
       "description": "Web開発・UI/UX・品質改善などを、作りながら試すプロジェクト"
@@ -22,7 +22,7 @@
       "description": "Webならではの表現とインタラクションを探求する実験サイト"
     },
     "portfolioSite": {
-      "description": "Figmaでデザインし、Next.jsで実装したポートフォリオサイト"
+      "description": "UIやインタラクションにこだわって制作したポートフォリオサイト"
     },
     "webSite": "Webサイト"
   },
