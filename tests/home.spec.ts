@@ -45,7 +45,7 @@ const projects: ProjectExpectation[] = [
   },
   {
     title: "Animal Corporation",
-    description: "Figmaでデザインし、Next.jsで実装したコーポレートサイト",
+    description: "デザインから実装まで一貫して手がけたコーポレートサイト",
     image: "/images/works/animal-corporation.webp",
     links: [
       {
@@ -98,7 +98,7 @@ const projects: ProjectExpectation[] = [
   },
   {
     title: "Portfolio Site",
-    description: "Figmaでデザインし、Next.jsで実装したポートフォリオサイト",
+    description: "UIやインタラクションにこだわって制作したポートフォリオサイト",
     image: "/images/works/portfolio-site.webp",
     links: [
       {
@@ -195,7 +195,7 @@ test.describe("Portfolio", () => {
     ).toBeVisible();
 
     await expect(
-      page.getByText("Web Engineer / UI・UX / Interaction", {
+      page.getByText("UI / Interaction / Development", {
         exact: true,
       }),
     ).toBeVisible();

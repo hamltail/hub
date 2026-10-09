@@ -9,8 +9,14 @@ test.describe("English locale", () => {
     await expect(page.locator("html")).toHaveAttribute("lang", "en");
 
     await expect(
+      page.getByText("UI / Interaction / Development", {
+        exact: true,
+      }),
+    ).toBeVisible();
+
+    await expect(
       page.getByText(
-        "A corporate website designed in Figma and built with Next.js.",
+        "A corporate website handled end-to-end, from design to implementation.",
         {
           exact: true,
         },
@@ -46,7 +52,7 @@ test.describe("English locale", () => {
 
     await expect(
       page.getByText(
-        "A portfolio website designed in Figma and built with Next.js.",
+        "A portfolio website crafted with a focus on UI design and interaction.",
         {
           exact: true,
         },
