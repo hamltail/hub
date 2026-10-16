@@ -2,6 +2,14 @@
 
 Web制作・UI設計・個人開発の制作物を掲載したポートフォリオサイトです。
 
+## Latest Release
+
+### 2026-10-16
+
+- Pawthのプロジェクト画像を最新の画面に更新しました。
+- プロフィールの専門領域表記を削除し、Portfolio Siteの説明文を見直しました。
+- 開発環境の管理負担を軽減するため、Visual Regression TestとCodeQLを削除しました。
+
 ## Live Demo
 
 🌐 [Webサイトを見る](https://hub.hamltail.dev/)
@@ -19,14 +27,14 @@ Alternative: [Vercel Deployment](https://hub-plum-iota.vercel.app/)
 | Design         | Figma                                                    |
 | Frontend       | TypeScript, React, Next.js, Tailwind CSS, next-intl      |
 | Testing        | Playwright, Lighthouse CI, k6, Vitest, Stryker, axe-core |
-| Security       | OWASP ZAP, CodeQL                                        |
+| Security       | OWASP ZAP                                                |
 | Infrastructure | Docker, Vercel, GitHub Actions                           |
 
 ## Technical Decisions
 
 Next.js・TypeScript・Tailwind CSSを用いて制作し、作品の追加や継続的な改善を行いやすい構成にしています。
 
-コンポーネントの分割やデザイントークンの導入、多言語対応などを進めるとともに、E2EテストやVisual Regression Testなどを取り入れ、品質を継続的に確認・改善できる構成にしています。
+コンポーネントの分割やデザイントークンの導入、多言語対応などを進めるとともに、E2Eテストやアクセシビリティ検証などを取り入れ、品質を継続的に確認・改善できる構成にしています。
 
 ## Development
 
