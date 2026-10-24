@@ -4,12 +4,11 @@ Web制作・UI設計・個人開発の制作物を掲載したポートフォリ
 
 ## Latest Release
 
-### 2026-10-17
+### 2026-10-24
 
-- カードのデザインを調整し、ライトモードの背景を半透明にしました。
-- 浮遊する背景シェイプと、クリック時のアニメーションを追加しました。
-- テーマ切り替えUIとトップへ戻るボタンのデザインを改善しました。
-- カボチャの表示位置と演出を季節に応じて自動で切り替えるようにしました。
+- HubとInteraction LabのFigmaページ統合にあわせて、デザインリンクを更新しました。
+- PawthのFigmaリンクを追加しました。
+- Pawthのプロジェクト画像を更新しました。
 
 ## Live Demo
 
@@ -19,7 +18,7 @@ Alternative: [Vercel Deployment](https://hub-plum-iota.vercel.app/)
 
 ## Design
 
-🎨 [Figmaデザインを見る](https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/Public?node-id=2147-128&p=f)
+🎨 [Figmaデザインを見る](https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/Public?node-id=2038-128)
 
 ## Tech Stack
 
